@@ -29,7 +29,7 @@
 TODO
 
 ## Documentation
-The documentation for each module is available [here](https://rmoodsteam.github.io/RMoods/).
+The documentation for each module is available [here](https://sebixmaster.github.io).
 
 ## Authors
 * [Katarzyna Jabłońska](https://github.com/katJablonska)
