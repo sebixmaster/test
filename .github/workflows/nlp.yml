@@ -2,6 +2,7 @@ name: Python NLP
 
 on:
   push:
+    branches: ["**"]
     tags:
       - "*"
 
