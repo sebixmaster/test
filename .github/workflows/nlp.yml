@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Print Tag
         run: |
-          if [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            echo "Tag: ${{ github.ref_name }}"
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            echo "Tag: ${GITHUB_REF#refs/tags/}"
           else
-            echo "Branch: ${{ github.ref_name }}"
+            echo "Branch: ${GITHUB_REF#refs/heads/}"
           fi
