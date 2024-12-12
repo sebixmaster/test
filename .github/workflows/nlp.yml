@@ -2,18 +2,14 @@ name: Python NLP
 
 on:
   push:
-    branches: ["**"]
-  pull_request:
-    branches: ["**"]
+    tags:
+      - "*"
 
 jobs:
-  build_windows:
+  github-example-tags:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Tag
+      - name: GitHub Tag Name example
         run: |
-          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
-            echo "Tag: ${GITHUB_REF#refs/tags/}"
-          else
-            echo "Branch: ${GITHUB_REF#refs/heads/}"
-          fi
+          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
